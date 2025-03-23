@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Blog posts by Devin on web development and programming." />
+  <meta name="keywords" content="Blog, Web Development, Programming, Devin" />
+  <meta name="author" content="Devin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devin's Blog</title>
+
+  <!-- Google Fonts + Font Awesome + CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <p>This site uses cookies to improve your experience. By continuing, you agree to our 
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookies">Got it!</button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky-header">
+    <div class="logo">Devin's Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active-link">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section class="content-section">
+    <h1>Blog</h1>
+
+    <article class="blog-post">
+      <h2>How to Get Started with React</h2>
+      <p class="post-date">Published on January 1, 2025</p>
+      <p>
+        React is a popular JavaScript library for building user interfaces. In this post, we’ll explore the basics
+        of creating your first React application, including component structure, state management, and best practices...
+        <a href="#">Read more</a>
+      </p>
+    </article>
+
+    <article class="blog-post">
+      <h2>5 Tips to Improve Your CSS Skills</h2>
+      <p class="post-date">Published on February 15, 2025</p>
+      <p>
+        CSS can be tricky, especially when dealing with responsive layouts and browser inconsistencies. Here are five
+        practical tips you can use to enhance your CSS workflow, from using modern layout modules like Flexbox and Grid
+        to leveraging pre-processors like SASS...
+        <a href="#">Read more</a>
+      </p>
+    </article>
+
+    <!-- Add more blog posts here -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Devin's Projects Portfolio</p>
+    <div class="social-icons">
+      <a href="https://github.com/Devin-py" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
