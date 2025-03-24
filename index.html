@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1983419722642898"
-     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
-  <meta name="description" content="A modern portfolio of coding projects by Devin. Click to view and copy source code." />
-  <meta name="keywords" content="HTML, CSS, JavaScript, Projects, Source Code" />
+  <meta name="description" content="Devin's portfolio of coding projects. Explore in-depth descriptions and source code snippets." />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Projects, Source Code, Portfolio" />
   <meta name="author" content="Devin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devin's Projects Portfolio</title>
@@ -27,14 +25,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- COOKIE BANNER -->
-  <div class="cookie-banner" id="cookie-banner">
-    <p>This site uses cookies to improve your experience. By continuing, you agree to our 
-      <a href="privacy.html">Privacy Policy</a>.
-    </p>
-    <button id="accept-cookies">Got it!</button>
-  </div>
-
   <!-- HEADER -->
   <header class="sticky-header">
     <div class="logo">Devin's Portfolio</div>
@@ -54,56 +44,56 @@
   <section class="hero">
     <div class="hero-overlay">
       <h1>Welcome to My Projects Portfolio</h1>
-      <p>Explore my coding projects, view source code, and copy for your own learning.</p>
-      <a class="hero-btn" href="#projects">See Projects</a>
+      <p>Dive into my coding projects, each with a detailed write-up and source code for your learning.</p>
+      <a class="hero-btn" href="#projects">Explore Projects</a>
     </div>
   </section>
 
-  <!-- SEARCH BAR -->
-  <section class="search-bar">
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Search Projects by Name or Description..."
-    />
-  </section>
-
-  <!-- PROJECTS SECTION -->
+  <!-- MAIN CONTENT -->
   <section id="projects" class="projects-section">
-    <h2>Projects</h2>
+    <h2>My Projects</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+      Below are some of my featured projects. Each project includes a short overview, the tech stack, challenges I faced, and a code snippet you can copy.
+    </p>
 
-    <!-- Ad placeholder (top of projects) -->
+    <!-- Ad placeholder (only if there's enough text above) -->
     <div class="ad-container">
-      <p>Ad placeholder (728x90) – Replace with your AdSense code</p>
+      <!-- Replace with your AdSense code ONLY if you have enough content -->
+      <p>Ad placeholder (728x90) – Replace with AdSense code if desired</p>
     </div>
 
     <div class="projects-grid" id="projects-grid">
       <!-- Project Card 1 -->
-      <div class="project-card" data-title="Viral Heart Animation" data-description="Cool feature of XYZ technology">
+      <div class="project-card" data-title="Project One" data-description="Cool feature of XYZ technology">
         <div class="project-header">
           <h3>VIRAL HEART ANIMATION <i class="fas fa-code"></i></h3>
-          <p>Impress your Crush by this Viral Heart Animation</p>
+          <p>
+            This Python script uses Turtle graphics to draw a heart on a black background. It defines hearta(k) (cubed sine) and heartb(k) (cosine combo) to calculate coordinates, plotting them over 10,000 iterations in pinkish-red (#f73487), scaled by 20, with the turtle returning to the origin each time to fill the shape.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, Turtle, Math<br/>
+            <strong>Key Challenges:</strong> Ensuring smooth, continuous heart shape rendering with high iteration count and precise coordinate scaling.
+          </p>
         </div>
         <div class="code-container">
           <pre class="code-snippet" id="code-1">
-
-import math 
-from turtle import *
-def hearta(k):
-    return 15*math.sin(k)**3
-def heartb(k):
-    return 12*math.cos(k)-5*\
-        math.cos(2*k)-2*\
-        math.cos(3*k)-\
-        math.cos(4*k)
-speed(0)
-bgcolor("black")
-for i in range(10000):
-    goto(hearta(i)*20,heartb(i)*20)
-    for j in range(5):
-        color("#f73487")
-    goto(0,0)
-done()
+            import math 
+            from turtle import *
+            def hearta(k):
+                return 15*math.sin(k)**3
+            def heartb(k):
+                return 12*math.cos(k)-5*\
+                    math.cos(2*k)-2*\
+                    math.cos(3*k)-\
+                    math.cos(4*k)
+            speed(0)
+            bgcolor("black")
+            for i in range(10000):
+                goto(hearta(i)*20,heartb(i)*20)
+                for j in range(5):
+                    color("#f73487")
+                goto(0,0)
+            done()
           </pre>
           <button class="copy-btn" data-target="code-1"><i class="fas fa-copy"></i> Copy Code</button>
         </div>
@@ -112,8 +102,14 @@ done()
       <!-- Project Card 2 -->
       <div class="project-card" data-title="Project Two" data-description="Interesting functionality demonstration">
         <div class="project-header">
-          <h3>BACKGROUND REMOVER <i class="fas fa-code"></i></h3>
-          <p>Remove the Background of the images by just one click.</p>
+          <h3>Ai Background Remover <i class="fas fa-code"></i></h3>
+          <p>
+            This Python script uses OpenCV to create a mask by letting users draw a polygon around an object in an image (nameLogo.png). It applies GrabCut to refine the mask and isolate the object from the background, displaying the result.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, OpenCV, NumPy<br/>
+            <strong>Key Challenges:</strong> Accurately capturing user-drawn polygon and refining it with GrabCut for precise object segmentation.
+          </p>
         </div>
         <div class="code-container">
           <pre class="code-snippet" id="code-2">
@@ -190,12 +186,20 @@ done()
             cv2.imshow("Result", result)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
+            
 
       <!-- Project Card 3 -->
       <div class="project-card" data-title="Project Three" data-description="React and Node fullstack example">
         <div class="project-header">
           <h3>Project Three <i class="fas fa-code"></i></h3>
-          <p>Fullstack app using React (frontend) and Node.js (backend).</p>
+          <p>
+            A fullstack app using React (frontend) and Node.js (backend). This project handles user authentication,
+            database interactions, and real-time updates with Socket.io.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB<br/>
+            <strong>Key Challenges:</strong> Managing state across components, securing API endpoints, scaling for more users.
+          </p>
         </div>
         <div class="code-container">
           <pre class="code-snippet" id="code-3">
@@ -217,10 +221,11 @@ app.listen(3000, () => {
     </div>
   </section>
 
-  <!-- SECOND AD PLACEMENT -->
+  <!-- SECOND AD PLACEMENT (only if there's enough content above it) -->
   <section class="ad-section">
     <div class="ad-container">
-      <p>Ad placeholder (300x250) – Replace with your AdSense code</p>
+      <!-- Insert AdSense code if you have enough content -->
+      <p>Ad placeholder (300x250) – Replace with AdSense code if desired</p>
     </div>
   </section>
 
@@ -229,11 +234,10 @@ app.listen(3000, () => {
     <p>&copy; 2025 Devin's Projects Portfolio</p>
     <div class="social-icons">
       <a href="https://github.com/Devin-py" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <!-- Add other social links if you want -->
     </div>
   </footer>
 
-  <!-- SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
