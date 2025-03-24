@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
-  <meta name="description" content="Blog posts by Devin on web development and programming." />
-  <meta name="keywords" content="Blog, Web Development, Programming, Devin" />
+  <meta name="description" content="Devin's Blog on web development and programming." />
+  <meta name="keywords" content="Blog, Web Development, Programming, Tutorials" />
   <meta name="author" content="Devin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devin's Blog</title>
 
-  <!-- Google Fonts + Font Awesome + CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
@@ -22,15 +20,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- COOKIE BANNER -->
-  <div class="cookie-banner" id="cookie-banner">
-    <p>This site uses cookies to improve your experience. By continuing, you agree to our 
-      <a href="privacy.html">Privacy Policy</a>.
-    </p>
-    <button id="accept-cookies">Got it!</button>
-  </div>
-
-  <!-- HEADER -->
   <header class="sticky-header">
     <div class="logo">Devin's Portfolio</div>
     <nav>
@@ -45,16 +34,30 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <section class="content-section">
     <h1>Blog</h1>
+
+    <!-- You can place an ad here if you have enough text above -->
+    <!-- <div class="ad-container">
+      <p>Ad placeholder (728x90) – Replace with AdSense code if desired</p>
+    </div> -->
 
     <article class="blog-post">
       <h2>How to Get Started with React</h2>
       <p class="post-date">Published on January 1, 2025</p>
       <p>
         React is a popular JavaScript library for building user interfaces. In this post, we’ll explore the basics
-        of creating your first React application, including component structure, state management, and best practices...
+        of creating your first React application, including component structure, state management, and best practices.
+        Whether you're coming from a different front-end framework or completely new to modern JavaScript development,
+        React provides a straightforward approach to building scalable web applications.
+      </p>
+      <p>
+        One of the key features of React is its virtual DOM, which optimizes rendering performance by selectively updating
+        only the parts of the UI that change. We’ll walk through a simple “Hello World” app, discuss JSX syntax, and then
+        gradually introduce props and state. By the end of this tutorial, you’ll have a clear idea of how to structure your
+        React components and how to handle data flow within your app.
+      </p>
+      <p>
         <a href="#">Read more</a>
       </p>
     </article>
@@ -64,21 +67,25 @@
       <p class="post-date">Published on February 15, 2025</p>
       <p>
         CSS can be tricky, especially when dealing with responsive layouts and browser inconsistencies. Here are five
-        practical tips you can use to enhance your CSS workflow, from using modern layout modules like Flexbox and Grid
-        to leveraging pre-processors like SASS...
+        practical tips you can use to enhance your CSS workflow. First, embrace modern layout modules like Flexbox and Grid:
+        they simplify the process of building complex, responsive designs without relying on floats or hacks. 
+      </p>
+      <p>
+        Second, consider using a pre-processor like SASS or LESS to keep your styles organized and modular. Third, make use
+        of browser DevTools to debug layout issues quickly. Fourth, regularly refactor your CSS to remove duplicates and
+        ensure maintainability. Finally, keep an eye on performance: large CSS files can slow down page rendering. 
         <a href="#">Read more</a>
       </p>
     </article>
 
-    <!-- Add more blog posts here -->
+    <!-- Add more blog posts as needed -->
+
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Devin's Projects Portfolio</p>
     <div class="social-icons">
       <a href="https://github.com/Devin-py" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
   <script src="script.js"></script>
