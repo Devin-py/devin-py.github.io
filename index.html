@@ -51,20 +51,38 @@
   <section id="projects" class="projects-section">
     <h2>My Projects</h2>
     <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-      Below are some of my featured projects. Each project includes a short overview, the tech stack, challenges I faced, and a code snippet you can copy.
+      Below are some of my featured projects. Each one includes an overview of why I built it, the tech stack, 
+      key challenges I faced, and lessons learned. You’ll also find a code snippet you can copy and experiment with.
     </p>
 
     <div class="projects-grid" id="projects-grid">
+
       <!-- Project Card 1 -->
       <div class="project-card" data-title="Project One" data-description="Cool feature of XYZ technology">
         <div class="project-header">
           <h3>VIRAL HEART ANIMATION <i class="fas fa-code"></i></h3>
           <p>
-            This Python script uses Turtle graphics to draw a heart on a black background. It defines hearta(k) (cubed sine) and heartb(k) (cosine combo) to calculate coordinates, plotting them over 10,000 iterations in pinkish-red (#f73487), scaled by 20, with the turtle returning to the origin each time to fill the shape.
+            This Python script uses Turtle graphics to draw a heart on a black background. It defines <code>hearta(k)</code> (cubed sine) 
+            and <code>heartb(k)</code> (cosine combo) to calculate coordinates, plotting them over 10,000 iterations in pinkish-red 
+            (<code>#f73487</code>), scaled by 20, with the turtle returning to the origin each time to fill the shape.
           </p>
           <p>
-            <strong>Tech Stack:</strong> Python, Turtle, Math<br/>
-            <strong>Key Challenges:</strong> Ensuring smooth, continuous heart shape rendering with high iteration count and precise coordinate scaling.
+            <strong>Why I Built It:</strong> I wanted to explore creative mathematical patterns using Python’s Turtle module. 
+            Generating a continuous heart shape through trigonometric functions was both a fun experiment and a chance to deepen 
+            my understanding of Python graphics.
+          </p>
+          <p>
+            <strong>Challenges:</strong> Ensuring smooth, continuous rendering of the heart shape with a high iteration count 
+            required careful scaling. I had to make sure the turtle’s speed was optimized and that the transitions from each 
+            point back to the origin were visually appealing rather than choppy.
+          </p>
+          <p>
+            <strong>Lessons Learned:</strong> I discovered how small adjustments in trigonometric formulas can significantly 
+            affect the shape’s appearance. I also learned to manage performance by minimizing unnecessary function calls, 
+            which is crucial when iterating thousands of times.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, Turtle, Math
           </p>
         </div>
         <div class="code-container">
@@ -94,13 +112,27 @@ done()
       <!-- Project Card 2 -->
       <div class="project-card" data-title="Project Two" data-description="Interesting functionality demonstration">
         <div class="project-header">
-          <h3>Ai Background Remover <i class="fas fa-code"></i></h3>
+          <h3>AI Background Remover <i class="fas fa-code"></i></h3>
           <p>
-            This Python script uses OpenCV to create a mask by letting users draw a polygon around an object in an image (nameLogo.png). It applies GrabCut to refine the mask and isolate the object from the background, displaying the result.
+            This Python script uses OpenCV to create a mask by letting users draw a polygon around an object in an image (<code>nameLogo.png</code>). 
+            It applies the GrabCut algorithm to refine the mask and isolate the object from the background, displaying the final result.
           </p>
           <p>
-            <strong>Tech Stack:</strong> Python, OpenCV, NumPy<br/>
-            <strong>Key Challenges:</strong> Accurately capturing user-drawn polygon and refining it with GrabCut for precise object segmentation.
+            <strong>Why I Built It:</strong> I was curious about how professional photo editing tools achieve background removal. 
+            Implementing a simplified version using Python and OpenCV gave me insights into how image segmentation works under the hood.
+          </p>
+          <p>
+            <strong>Challenges:</strong> The main challenge was accurately capturing a user-drawn polygon and ensuring that 
+            the GrabCut algorithm refined it correctly. Handling edge cases, such as very close foreground and background colors, 
+            required fine-tuning of the mask.
+          </p>
+          <p>
+            <strong>Lessons Learned:</strong> I gained a better understanding of OpenCV’s capabilities for computer vision tasks, 
+            particularly the steps involved in creating and refining masks. I also learned how crucial user interaction can be 
+            for more accurate segmentation.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, OpenCV, NumPy
           </p>
         </div>
         <div class="code-container">
@@ -171,12 +203,27 @@ cv2.destroyAllWindows()
         <div class="project-header">
           <h3>Project Three <i class="fas fa-code"></i></h3>
           <p>
-            A fullstack app using React (frontend) and Node.js (backend). This project handles user authentication,
-            database interactions, and real-time updates with Socket.io.
+            This is a fullstack app using React (frontend) and Node.js (backend). It manages user authentication, 
+            database interactions, and real-time updates with Socket.io to deliver a seamless user experience.
           </p>
           <p>
-            <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB<br/>
-            <strong>Key Challenges:</strong> Managing state across components, securing API endpoints, scaling for more users.
+            <strong>Why I Built It:</strong> I wanted to create a practical application that involved both front-end 
+            and back-end development. By combining React and Node.js, I could handle everything from dynamic UI rendering 
+            to server-side data processing in a single project.
+          </p>
+          <p>
+            <strong>Challenges:</strong> Managing state across multiple React components was initially complex, 
+            especially when real-time data updates came into play via Socket.io. Securing the API endpoints and 
+            integrating MongoDB for persistent data storage also required careful planning.
+          </p>
+          <p>
+            <strong>Lessons Learned:</strong> This project taught me the importance of modular code structure, 
+            especially in a fullstack environment. I learned how to properly organize routes, controllers, and 
+            components so each piece remained maintainable. The experience also reinforced best practices in 
+            user authentication and database schema design.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB
           </p>
         </div>
         <div class="code-container">
@@ -196,6 +243,7 @@ app.listen(3000, () => {
           <button class="copy-btn" data-target="code-3"><i class="fas fa-copy"></i> Copy Code</button>
         </div>
       </div>
+
     </div>
   </section>
 
