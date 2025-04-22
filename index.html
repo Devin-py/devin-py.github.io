@@ -50,43 +50,21 @@
   <!-- MAIN CONTENT -->
   <section id="projects" class="projects-section">
     <h2>My Projects</h2>
-    <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-      Below are some of my featured projects. Each one includes an overview of why I built it, the tech stack, 
-      key challenges I faced, and lessons learned. You’ll also find a code snippet you can copy and experiment with.
+    <p class="centered-text">
+      Below are some of my featured projects. Each project includes a short overview, the tech stack, challenges I faced, and a code snippet you can copy.
     </p>
 
-    <div class="projects-grid" id="projects-grid">
-
+    <div class="projects-grid">
       <!-- Project Card 1 -->
-      <div class="project-card" data-title="Project One" data-description="Cool feature of XYZ technology">
+      <div class="project-card">
         <div class="project-header">
           <h3>VIRAL HEART ANIMATION <i class="fas fa-code"></i></h3>
-          <p>
-            This Python script uses Turtle graphics to draw a heart on a black background. It defines <code>hearta(k)</code> (cubed sine) 
-            and <code>heartb(k)</code> (cosine combo) to calculate coordinates, plotting them over 10,000 iterations in pinkish-red 
-            (<code>#f73487</code>), scaled by 20, with the turtle returning to the origin each time to fill the shape.
-          </p>
-          <p>
-            <strong>Why I Built It:</strong> I wanted to explore creative mathematical patterns using Python’s Turtle module. 
-            Generating a continuous heart shape through trigonometric functions was both a fun experiment and a chance to deepen 
-            my understanding of Python graphics.
-          </p>
-          <p>
-            <strong>Challenges:</strong> Ensuring smooth, continuous rendering of the heart shape with a high iteration count 
-            required careful scaling. I had to make sure the turtle’s speed was optimized and that the transitions from each 
-            point back to the origin were visually appealing rather than choppy.
-          </p>
-          <p>
-            <strong>Lessons Learned:</strong> I discovered how small adjustments in trigonometric formulas can significantly 
-            affect the shape’s appearance. I also learned to manage performance by minimizing unnecessary function calls, 
-            which is crucial when iterating thousands of times.
-          </p>
-          <p>
-            <strong>Tech Stack:</strong> Python, Turtle, Math
-          </p>
+          <p>This project was inspired by mathematical beauty and visual creativity. I wanted to combine my love for math and programming to render a smooth heart animation using trigonometric functions. It was a fun experiment with Turtle graphics in Python, and seeing the heart shape gradually form was really rewarding.</p>
+          <p>Challenges included tweaking the math expressions to get the proportions right and ensuring performance didn’t suffer with 10,000 iterations. Through this, I learned a lot about coordinate mapping and how drawing performance can be optimized with Turtle.</p>
+          <p><strong>Tech Stack:</strong> Python, Turtle, Math</p>
         </div>
         <div class="code-container">
-          <pre class="code-snippet" id="code-1">
+<pre class="code-snippet" id="code-1">
 import math 
 from turtle import *
 def hearta(k):
@@ -104,39 +82,21 @@ for i in range(10000):
         color("#f73487")
     goto(0,0)
 done()
-          </pre>
+</pre>
           <button class="copy-btn" data-target="code-1"><i class="fas fa-copy"></i> Copy Code</button>
         </div>
       </div>
 
       <!-- Project Card 2 -->
-      <div class="project-card" data-title="Project Two" data-description="Interesting functionality demonstration">
+      <div class="project-card">
         <div class="project-header">
-          <h3>AI Background Remover <i class="fas fa-code"></i></h3>
-          <p>
-            This Python script uses OpenCV to create a mask by letting users draw a polygon around an object in an image (<code>nameLogo.png</code>). 
-            It applies the GrabCut algorithm to refine the mask and isolate the object from the background, displaying the final result.
-          </p>
-          <p>
-            <strong>Why I Built It:</strong> I was curious about how professional photo editing tools achieve background removal. 
-            Implementing a simplified version using Python and OpenCV gave me insights into how image segmentation works under the hood.
-          </p>
-          <p>
-            <strong>Challenges:</strong> The main challenge was accurately capturing a user-drawn polygon and ensuring that 
-            the GrabCut algorithm refined it correctly. Handling edge cases, such as very close foreground and background colors, 
-            required fine-tuning of the mask.
-          </p>
-          <p>
-            <strong>Lessons Learned:</strong> I gained a better understanding of OpenCV’s capabilities for computer vision tasks, 
-            particularly the steps involved in creating and refining masks. I also learned how crucial user interaction can be 
-            for more accurate segmentation.
-          </p>
-          <p>
-            <strong>Tech Stack:</strong> Python, OpenCV, NumPy
-          </p>
+          <h3>AI BACKGROUND REMOVER <i class="fas fa-code"></i></h3>
+          <p>This project stemmed from my interest in image processing. I wanted to experiment with OpenCV’s GrabCut feature, and the idea of interactively selecting and isolating objects intrigued me. The app lets users draw a polygon to mask an object and removes everything else.</p>
+          <p>The hardest part was handling the user input and accurately feeding that to the GrabCut algorithm. I also learned how essential masks and bitwise operations are for manipulating images. This tool is especially useful for logo extraction and creating PNGs with transparency.</p>
+          <p><strong>Tech Stack:</strong> Python, OpenCV, NumPy</p>
         </div>
         <div class="code-container">
-          <pre class="code-snippet" id="code-2">
+<pre class="code-snippet" id="code-2">
 import cv2
 import numpy as np
 
@@ -161,8 +121,7 @@ def create_mask(image):
     cv2.setMouseCallback("Image Editor", draw_shape)
 
     print("Draw a polygon around the object to create a mask.")
-    print("Left-click to start drawing, move the mouse to draw, and left-click again to finish.")
-    print("Press 'c' to confirm the selection or 'r' to reset.")
+    print("Left-click to draw, press 'c' to confirm or 'r' to reset.")
 
     while True:
         cv2.imshow("Image Editor", img_copy)
@@ -187,47 +146,25 @@ mask[mask == 0] = 0
 bgd_model = np.zeros((1, 65), np.float64)
 fgd_model = np.zeros((1, 65), np.float64)
 cv2.grabCut(img, mask, None, bgd_model, fgd_model, 5, cv2.GC_INIT_WITH_MASK)
-mask, bgd_model, fgd_model = cv2.grabCut(img, mask, None, bgd_model, fgd_model, 5, cv2.GC_EVAL)
-
 result = cv2.bitwise_and(img, img, mask=mask)
 cv2.imshow("Result", result)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-          </pre>
+</pre>
           <button class="copy-btn" data-target="code-2"><i class="fas fa-copy"></i> Copy Code</button>
         </div>
       </div>
 
       <!-- Project Card 3 -->
-      <div class="project-card" data-title="Project Three" data-description="React and Node fullstack example">
+      <div class="project-card">
         <div class="project-header">
-          <h3>Project Three <i class="fas fa-code"></i></h3>
-          <p>
-            This is a fullstack app using React (frontend) and Node.js (backend). It manages user authentication, 
-            database interactions, and real-time updates with Socket.io to deliver a seamless user experience.
-          </p>
-          <p>
-            <strong>Why I Built It:</strong> I wanted to create a practical application that involved both front-end 
-            and back-end development. By combining React and Node.js, I could handle everything from dynamic UI rendering 
-            to server-side data processing in a single project.
-          </p>
-          <p>
-            <strong>Challenges:</strong> Managing state across multiple React components was initially complex, 
-            especially when real-time data updates came into play via Socket.io. Securing the API endpoints and 
-            integrating MongoDB for persistent data storage also required careful planning.
-          </p>
-          <p>
-            <strong>Lessons Learned:</strong> This project taught me the importance of modular code structure, 
-            especially in a fullstack environment. I learned how to properly organize routes, controllers, and 
-            components so each piece remained maintainable. The experience also reinforced best practices in 
-            user authentication and database schema design.
-          </p>
-          <p>
-            <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB
-          </p>
+          <h3>FULLSTACK AUTH APP <i class="fas fa-code"></i></h3>
+          <p>This was my deep dive into fullstack development. I built this to understand authentication systems, real-time updates, and how frontend talks to backend. It includes user login/register, database storage, and WebSocket connections for instant messaging features.</p>
+          <p>I struggled most with handling JWTs securely and managing frontend state with React. I learned the importance of separating concerns and structuring routes properly in Express. It’s now a foundation I use for future web apps.</p>
+          <p><strong>Tech Stack:</strong> React, Node.js, Express, MongoDB</p>
         </div>
         <div class="code-container">
-          <pre class="code-snippet" id="code-3">
+<pre class="code-snippet" id="code-3">
 // Example of a simple Express server
 const express = require('express');
 const app = express();
@@ -239,11 +176,10 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
-          </pre>
+</pre>
           <button class="copy-btn" data-target="code-3"><i class="fas fa-copy"></i> Copy Code</button>
         </div>
       </div>
-
     </div>
   </section>
 
