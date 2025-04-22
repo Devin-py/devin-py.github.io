@@ -22,7 +22,7 @@ projectCards.forEach((card) => {
 });
 
 /*********************************
-  2) Copy-to-Clipboard Functionality
+  2) Copy-to-Clipboard Functionality (Mobile Friendly)
 **********************************/
 document.querySelectorAll(".copy-btn").forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -34,6 +34,8 @@ document.querySelectorAll(".copy-btn").forEach((button) => {
       setTimeout(() => {
         button.innerHTML = '<i class="fas fa-copy"></i> Copy Code';
       }, 2000);
+    }).catch(() => {
+      alert("Clipboard copy failed. Please copy manually.");
     });
   });
 });
@@ -68,12 +70,12 @@ const acceptCookiesBtn = document.getElementById("accept-cookies");
 
 // Check if cookies accepted previously
 if (localStorage.getItem("cookiesAccepted") === "true") {
-  cookieBanner.style.display = "none";
+  if (cookieBanner) cookieBanner.style.display = "none";
 }
 
 if (acceptCookiesBtn) {
   acceptCookiesBtn.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
-    cookieBanner.style.display = "none";
+    if (cookieBanner) cookieBanner.style.display = "none";
   });
-}
+});
