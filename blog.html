@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Devin's Tech Blog - Insights and tutorials about software development" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Devin's Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-switch" aria-label="Toggle dark/light mode">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-text">Devin</span>
+        <span class="logo-dot"></span>
+        <span class="logo-text-secondary">dev</span>
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html" class="active-link">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BLOG SECTION -->
+  <section class="blog-section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">Latest Articles</h1>
+      <p class="section-description animate-on-scroll">
+        Insights, tutorials, and thoughts about software development and technology.
+      </p>
+
+      <!-- Blog Categories -->
+      <div class="blog-categories animate-on-scroll">
+        <button class="category-tag active" data-category="all">All</button>
+        <button class="category-tag" data-category="tutorials">Tutorials</button>
+        <button class="category-tag" data-category="tech">Tech News</button>
+        <button class="category-tag" data-category="career">Career</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-post animate-on-scroll" data-category="tutorials">
+          <div class="blog-image">
+            <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg" alt="React Performance">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">March 15, 2025</span>
+              <span class="blog-category">Tutorials</span>
+            </div>
+            <h2>Optimizing React Performance: A Deep Dive</h2>
+            <p>Learn advanced techniques for improving your React application's performance through code splitting, lazy loading, and proper state management.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-post animate-on-scroll" data-category="tech">
+          <div class="blog-image">
+            <img src="https://images.pexels.com/photos/8728560/pexels-photo-8728560.jpeg" alt="AI Development">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">March 10, 2025</span>
+              <span class="blog-category">Tech News</span>
+            </div>
+            <h2>The Future of AI in Web Development</h2>
+            <p>Exploring how artificial intelligence is reshaping the landscape of web development and what it means for developers.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-post animate-on-scroll" data-category="career">
+          <div class="blog-image">
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Remote Work">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">March 5, 2025</span>
+              <span class="blog-category">Career</span>
+            </div>
+            <h2>Thriving in Remote Development Teams</h2>
+            <p>Tips and strategies for staying productive and maintaining work-life balance in remote software development roles.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="blog-post animate-on-scroll" data-category="tutorials">
+          <div class="blog-image">
+            <img src="https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg" alt="TypeScript Tips">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">March 1, 2025</span>
+              <span class="blog-category">Tutorials</span>
+            </div>
+            <h2>Advanced TypeScript Patterns</h2>
+            <p>Discover advanced TypeScript patterns and techniques to write more maintainable and type-safe code.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn"><i class="fas fa-ellipsis-h"></i></button>
+        <button class="pagination-btn">10</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Devin</span>
+          <span class="logo-dot"></span>
+          <span class="logo-text-secondary">dev</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Connect</h3>
+            <div class="social-icons">
+              <a href="https://github.com/Devin-py" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Devin's Projects Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="About Devin - Software Developer and Tech Enthusiast" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Devin's Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-switch" aria-label="Toggle dark/light mode">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-text">Devin</span>
+        <span class="logo-dot"></span>
+        <span class="logo-text-secondary">dev</span>
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" class="active-link">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image animate-on-scroll">
+          <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Devin's Profile" class="profile-image">
+        </div>
+        <div class="about-text">
+          <h1 class="animate-on-scroll">Hi, I'm Devin</h1>
+          <p class="lead animate-on-scroll">A passionate software developer with a love for creating elegant solutions to complex problems.</p>
+          
+          <div class="about-details animate-on-scroll">
+            <h2>My Journey</h2>
+            <p>With over 5 years of experience in software development, I've worked on a wide range of projects from web applications to machine learning systems. My passion lies in creating intuitive user experiences and writing clean, maintainable code.</p>
+            
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                  <li>React.js</li>
+                  <li>TypeScript</li>
+                  <li>CSS/SASS</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h3>Backend</h3>
+                <ul>
+                  <li>Node.js</li>
+                  <li>Python</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h3>Tools</h3>
+                <ul>
+                  <li>Git</li>
+                  <li>Docker</li>
+                  <li>AWS</li>
+                  <li>Linux</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="education-item">
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p>University of Technology - Class of 2020</p>
+            </div>
+
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+              <h3>Senior Software Developer</h3>
+              <p>TechCorp Solutions - 2020-Present</p>
+              <ul>
+                <li>Led development of enterprise-scale web applications</li>
+                <li>Mentored junior developers and conducted code reviews</li>
+                <li>Implemented CI/CD pipelines and improved deployment processes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Devin</span>
+          <span class="logo-dot"></span>
+          <span class="logo-text-secondary">dev</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Connect</h3>
+            <div class="social-icons">
+              <a href="https://github.com/Devin-py" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Devin's Projects Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
