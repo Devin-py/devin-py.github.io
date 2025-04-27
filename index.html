@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Devin's portfolio of coding projects. Explore in-depth descriptions and source code snippets." />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Projects, Source Code, Portfolio" />
+  <meta name="author" content="Devin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devin's Projects Portfolio</title>
+
+  <!-- ✅ Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1983419722642898"
+     crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Highlight.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-switch" aria-label="Toggle dark/light mode">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-text">Devin</span>
+        <span class="logo-dot"></span>
+        <span class="logo-text-secondary">dev</span>
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active-link">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="animate-on-scroll">Welcome to My <span class="highlight">Projects</span> Portfolio</h1>
+        <p class="hero-description animate-on-scroll">Dive into my coding projects, each with a detailed write-up and source code for your learning.</p>
+        <div class="hero-actions animate-on-scroll">
+          <a class="btn btn-primary" href="#projects">Explore Projects</a>
+          <a class="btn btn-outline" href="about.html">About Me</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-background">
+      <div class="hero-particles"></div>
+    </div>
+  </section>
+
+  <!-- FILTER SECTION -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-controls">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search projects...">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">All</button>
+          <button class="filter-tag" data-filter="python">Python</button>
+          <button class="filter-tag" data-filter="web">Web Dev</button>
+          <button class="filter-tag" data-filter="ai">AI</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">My Projects</h2>
+      <p class="section-description animate-on-scroll">
+        Below are some of my featured projects. Each project includes a short overview, the tech stack, challenges I faced, and a code snippet you can copy.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card animate-on-scroll" data-category="python">
+          <div class="project-header">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Math</span>
+              <span class="project-tag">Graphics</span>
+            </div>
+            <h3>VIRAL HEART ANIMATION <i class="fas fa-heart project-icon"></i></h3>
+            <p>This project was inspired by mathematical beauty and visual creativity. I wanted to combine my love for math and programming to render a smooth heart animation using trigonometric functions. It was a fun experiment with Turtle graphics in Python, and seeing the heart shape gradually form was really rewarding.</p>
+            <div class="project-details">
+              <div class="project-detail">
+                <h4>Challenges</h4>
+                <p>Tweaking the math expressions to get the proportions right and ensuring performance didn't suffer with 10,000 iterations. Through this, I learned a lot about coordinate mapping and how drawing performance can be optimized with Turtle.</p>
+              </div>
+              <div class="project-detail">
+                <h4>Tech Stack</h4>
+                <div class="tech-stack">
+                  <span class="tech-item">Python</span>
+                  <span class="tech-item">Turtle</span>
+                  <span class="tech-item">Math</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-secondary toggle-code">View Code <i class="fas fa-code"></i></button>
+          </div>
+          <div class="code-container">
+            <pre><code class="language-python" id="code-1">
+import math 
+from turtle import *
+def hearta(k):
+    return 15*math.sin(k)**3
+def heartb(k):
+    return 12*math.cos(k)-5*\
+        math.cos(2*k)-2*\
+        math.cos(3*k)-\
+        math.cos(4*k)
+speed(0)
+bgcolor("black")
+for i in range(10000):
+    goto(hearta(i)*20,heartb(i)*20)
+    for j in range(5):
+        color("#f73487")
+    goto(0,0)
+done()
+            </code></pre>
+            <button class="copy-btn" data-target="code-1"><i class="fas fa-copy"></i> Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card animate-on-scroll" data-category="python ai">
+          <div class="project-header">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Image Processing</span>
+            </div>
+            <h3>AI BACKGROUND REMOVER <i class="fas fa-image project-icon"></i></h3>
+            <p>This project stemmed from my interest in image processing. I wanted to experiment with OpenCV's GrabCut feature, and the idea of interactively selecting and isolating objects intrigued me. The app lets users draw a polygon to mask an object and removes everything else.</p>
+            <div class="project-details">
+              <div class="project-detail">
+                <h4>Challenges</h4>
+                <p>The hardest part was handling the user input and accurately feeding that to the GrabCut algorithm. I also learned how essential masks and bitwise operations are for manipulating images. This tool is especially useful for logo extraction and creating PNGs with transparency.</p>
+              </div>
+              <div class="project-detail">
+                <h4>Tech Stack</h4>
+                <div class="tech-stack">
+                  <span class="tech-item">Python</span>
+                  <span class="tech-item">OpenCV</span>
+                  <span class="tech-item">NumPy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-secondary toggle-code">View Code <i class="fas fa-code"></i></button>
+          </div>
+          <div class="code-container">
+            <pre><code class="language-python" id="code-2">
+import cv2
+import numpy as np
+
+def create_mask(image):
+    img_copy = image.copy()
+    coords = []
+    drawing = False
+
+    def draw_shape(event, x, y, flags, param):
+        nonlocal coords, drawing
+        if event == cv2.EVENT_LBUTTONDOWN:
+            coords.append((x, y))
+            drawing = True
+        elif event == cv2.EVENT_MOUSEMOVE and drawing:
+            coords.append((x, y))
+        elif event == cv2.EVENT_LBUTTONUP:
+            drawing = False
+            coords.append((x, y))
+            cv2.polylines(img_copy, [np.int32(coords)], True, (0, 255, 0), 2)
+
+    cv2.namedWindow("Image Editor")
+    cv2.setMouseCallback("Image Editor", draw_shape)
+
+    print("Draw a polygon around the object to create a mask.")
+    print("Left-click to draw, press 'c' to confirm or 'r' to reset.")
+
+    while True:
+        cv2.imshow("Image Editor", img_copy)
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord("c"):
+            break
+        elif key == ord("r"):
+            img_copy = image.copy()
+            coords = []
+            drawing = False
+
+    coords = np.int32(coords)
+    mask = np.zeros(image.shape[:2], dtype=np.uint8)
+    cv2.drawContours(mask, [coords], -1, 1, -1)
+    return mask
+
+img = cv2.imread("nameLogo.png")
+mask = create_mask(img)
+mask[mask == 255] = 1
+mask[mask == 0] = 0
+
+bgd_model = np.zeros((1, 65), np.float64)
+fgd_model = np.zeros((1, 65), np.float64)
+cv2.grabCut(img, mask, None, bgd_model, fgd_model, 5, cv2.GC_INIT_WITH_MASK)
+result = cv2.bitwise_and(img, img, mask=mask)
+cv2.imshow("Result", result)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+            </code></pre>
+            <button class="copy-btn" data-target="code-2"><i class="fas fa-copy"></i> Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card animate-on-scroll" data-category="web">
+          <div class="project-header">
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">React</span>
+            </div>
+            <h3>FULLSTACK AUTH APP <i class="fas fa-lock project-icon"></i></h3>
+            <p>This was my deep dive into fullstack development. I built this to understand authentication systems, real-time updates, and how frontend talks to backend. It includes user login/register, database storage, and WebSocket connections for instant messaging features.</p>
+            <div class="project-details">
+              <div class="project-detail">
+                <h4>Challenges</h4>
+                <p>I struggled most with handling JWTs securely and managing frontend state with React. I learned the importance of separating concerns and structuring routes properly in Express. It's now a foundation I use for future web apps.</p>
+              </div>
+              <div class="project-detail">
+                <h4>Tech Stack</h4>
+                <div class="tech-stack">
+                  <span class="tech-item">React</span>
+                  <span class="tech-item">Node.js</span>
+                  <span class="tech-item">Express</span>
+                  <span class="tech-item">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-secondary toggle-code">View Code <i class="fas fa-code"></i></button>
+          </div>
+          <div class="code-container">
+            <pre><code class="language-javascript" id="code-3">
+// Example of a simple Express server
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello from Project Three!');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+            </code></pre>
+            <button class="copy-btn" data-target="code-3"><i class="fas fa-copy"></i> Copy Code</button>
+          </div>
+        </div>
+
+        <!-- Project Card 4 (New) -->
+        <div class="project-card animate-on-scroll" data-category="web">
+          <div class="project-header">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">UX Design</span>
+            </div>
+            <h3>INTERACTIVE DASHBOARD <i class="fas fa-chart-line project-icon"></i></h3>
+            <p>A responsive dashboard interface with interactive charts, data visualization components, and a clean UI. This project focuses on presenting complex data in an intuitive and visually appealing way.</p>
+            <div class="project-details">
+              <div class="project-detail">
+                <h4>Challenges</h4>
+                <p>Creating a responsive layout that works well on all screen sizes while maintaining the integrity of data visualizations. Implementing efficient state management to handle real-time data updates.</p>
+              </div>
+              <div class="project-detail">
+                <h4>Tech Stack</h4>
+                <div class="tech-stack">
+                  <span class="tech-item">React</span>
+                  <span class="tech-item">D3.js</span>
+                  <span class="tech-item">CSS Grid</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-secondary toggle-code">View Code <i class="fas fa-code"></i></button>
+          </div>
+          <div class="code-container">
+            <pre><code class="language-jsx" id="code-4">
+import React, { useState, useEffect } from 'react';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+
+const Dashboard = () => {
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    // Fetch data or generate sample data
+    const sampleData = [
+      { name: 'Jan', value: 400 },
+      { name: 'Feb', value: 300 },
+      { name: 'Mar', value: 600 },
+      { name: 'Apr', value: 800 },
+      { name: 'May', value: 500 }
+    ];
+    setData(sampleData);
+  }, []);
+
+  return (
+    <div className="dashboard-container">
+      <h2>Monthly Performance</h2>
+      <div className="chart-container">
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={data}>
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Bar dataKey="value" fill="#8884d8" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
+            </code></pre>
+            <button class="copy-btn" data-target="code-4"><i class="fas fa-copy"></i> Copy Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to my newsletter to receive updates on new projects and coding tutorials.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Devin</span>
+          <span class="logo-dot"></span>
+          <span class="logo-text-secondary">dev</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Connect</h3>
+            <div class="social-icons">
+              <a href="https://github.com/Devin-py" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Devin's Projects Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" class="cookie-banner hidden">
+    <div class="cookie-content">
+      <p>This website uses cookies to ensure you get the best experience on our website.</p>
+      <div class="cookie-actions">
+        <button id="accept-cookies" class="btn btn-sm btn-primary">Accept</button>
+        <a href="privacy.html" class="btn btn-sm btn-outline">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
